@@ -1,11 +1,11 @@
 abstract class Shape{
+    double dim1, dim2;
     abstract void printArea();
 }
 class Rectangle extends Shape{
-    double length, width;
     Rectangle(double length, double width){
-        this.length = length;
-        this.width = width;
+        this.dim1 = length;
+        this.dim2 = width;
     }
     @Override
     void printArea(){
@@ -13,10 +13,9 @@ class Rectangle extends Shape{
     }
 }
 class Triangle extends Shape{
-    double base, height;
     Triangle(double base, double height){
-        this.base = base;
-        this.height = height;
+        this.dim1 = base;
+        this.dim2 = height;
     }
     @Override
     void printArea(){
@@ -24,9 +23,8 @@ class Triangle extends Shape{
     }
 }
 class Circle extends Shape{
-    double radius;
     Circle(double radius){
-        this.radius = radius;
+        this.dim1 = radius;
     }
     @Override
     void printArea(){
@@ -43,3 +41,4 @@ public class AreaCalculator {
         circ.printArea();
     }    
 }
+
