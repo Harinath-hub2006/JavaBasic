@@ -29,7 +29,7 @@ public class SimplePayroll {
         String name = sc.nextLine();
         System.out.println("Enter salary: ");
         double salary = Double.parseDouble(sc.nextLine());
-        if (name.isEmpty() || salary < 0) new Exception("Invalid name on Salary!");
+        if (name.isEmpty() || salary < 0)throw new Exception("Invalid name on Salary!");
         names[count] = name;
         salaries[count] = salary;
         undoIndex[undoCount++] = count;
@@ -52,4 +52,5 @@ public class SimplePayroll {
         salaries[idx] = 0;
     }
 }
+
 
